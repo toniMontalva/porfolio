@@ -1,8 +1,13 @@
-<ion-list>
-  <ion-item *ngFor="let skill of skills" lines="none">
-    <ion-avatar slot="start">
-      <ion-img [src]="skill.logo"></ion-img>
-    </ion-avatar>
-    <ion-label>{{ skill.name }}</ion-label>
-  </ion-item>
-</ion-list>
+<div class="main">
+  <h2 class="ion-text-center">Skills técnicas</h2>
+  <div class="wrapper">
+    <ion-list>
+      <ion-item *ngFor="let skill of skills" lines="none">
+        <ion-thumbnail slot="start">
+          <ion-img [src]="skill.logo"></ion-img>
+        </ion-thumbnail>
+        <div [ngClass]="skill.name.toLowerCase()">{{ skill.expertise }}</div>
+      </ion-item>
+    </ion-list>
+  </div>
+</div>

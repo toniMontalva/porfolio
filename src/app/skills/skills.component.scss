@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+.main {
+  margin-top: 5vh;
+  border: 1px black solid;
+  border-radius: 5px;
+  font-family: 'Exo', sans-serif;
+}
+
+h2 {
+  color: white;
+}
+
+.container {
+  width: 100%;
+}
+
+.angular {
+  width: 80%;
+  background-color: #04AA6D;
+}
+
+.ionic {
+  width: 95%;
+  background-color: #281ead;
+}
+
+.css {
+  width: 75%;
+  background-color: #ac5814;
+}
+
+.html {
+  width: 90%;
+  background-color: #e6d70f;
+}
+
+.dotnet {
+  width: 70%;
+  background-color: #701ca1;
+}

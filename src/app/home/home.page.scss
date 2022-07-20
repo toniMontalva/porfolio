@@ -38,3 +38,33 @@ h1 {
   background-color: #081b4b;
   color: white;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1,h2{
+    font-family: 'Exo', sans-serif;
+}
+
+.context {
+  width: 100%;
+  position: absolute;
+  top:10vh;
+}
+
+.context h1{
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
+
+.context h2{
+  margin-top: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
