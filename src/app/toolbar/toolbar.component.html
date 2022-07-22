@@ -1,0 +1,52 @@
+<!-- Use this nav bar on desktop-->
+<ng-template [ngIf]="desktop">
+  <ion-toolbar color="dark" class="desktop">
+    <ion-buttons slot="start">
+      <ion-button>
+        Sobre mi
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button>
+        Contacto
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button>
+        CV
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <a href="https://github.com/toniMontalva" target="_blank"><ion-icon slot="icon-only" name="logo-github"></ion-icon></a>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <a href="https://www.linkedin.com/in/antonio-montalv%C3%A1-pastor-75886b1a2/" target="_blank"><ion-icon slot="icon-only" name="logo-linkedin"></ion-icon></a>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ng-template>
+
+<!--This template for mobile view-->
+<ng-template [ngIf]="mobile">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <a href="https://github.com/toniMontalva" target="_blank"><ion-icon slot="icon-only" name="logo-github"></ion-icon></a>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <a href="https://www.linkedin.com/in/antonio-montalv%C3%A1-pastor-75886b1a2/" target="_blank"><ion-icon slot="icon-only" name="logo-linkedin"></ion-icon></a>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ng-template>
+
+
+

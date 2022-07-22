@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { SkillsComponent } from '../skills/skills.component';
 import { BackgroundComponent } from '../background/background.component';
+import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { BackgroundComponent } from '../background/background.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, SkillsComponent, BackgroundComponent]
+  declarations: [HomePage, SkillsComponent, BackgroundComponent, ToolbarComponent]
 })
 export class HomePageModule {}
