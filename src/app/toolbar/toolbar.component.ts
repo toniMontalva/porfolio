@@ -14,6 +14,11 @@ export class ToolbarComponent implements OnInit {
   constructor(private platform: Platform) {}
 
   ngOnInit() {
+    if (this.platform.is ('mobile')) {
+      this.mobile = true;
+    } else {
+      this.desktop = true;
+    }
     this.platform.resize.subscribe(async => {
       if (this.platform.is('mobile') || (this.platform.width() < 800)) {
         this.mobile = true;
