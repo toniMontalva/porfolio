@@ -8,15 +8,16 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { SkillsComponent } from '../skills/skills.component';
 import { BackgroundComponent } from '../background/background.component';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
-
+import { FormacionComponent } from '../formacion/formacion.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule
+  imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
+  declarations: [
+    HomePage,
+    SkillsComponent,
+    BackgroundComponent,
+    ToolbarComponent,
+    FormacionComponent,
   ],
-  declarations: [HomePage, SkillsComponent, BackgroundComponent, ToolbarComponent]
 })
 export class HomePageModule {}
