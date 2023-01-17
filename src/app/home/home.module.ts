@@ -9,6 +9,7 @@ import { SkillsComponent } from '../skills/skills.component';
 import { BackgroundComponent } from '../background/background.component';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { FormacionComponent } from '../formacion/formacion.component';
+import { ProyectosComponent } from '../proyectos/proyectos.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
@@ -18,6 +19,7 @@ import { FormacionComponent } from '../formacion/formacion.component';
     BackgroundComponent,
     ToolbarComponent,
     FormacionComponent,
+    ProyectosComponent
   ],
 })
 export class HomePageModule {}

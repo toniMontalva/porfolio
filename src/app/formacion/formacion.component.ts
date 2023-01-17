@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formacion.component.scss'],
 })
 export class FormacionComponent implements OnInit {
+  showFormacionInfo = false;
 
   constructor() { }
 

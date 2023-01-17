@@ -3,12 +3,12 @@
   <ion-toolbar color="dark" class="desktop">
     <ion-buttons slot="start">
       <ion-button>
-        Sobre mi
+        <a href="#Proyectos">Sobre mi</a>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="start">
       <ion-button>
-        Contacto
+        <a href="mailto:tonimontalvapastor@icloud.com">Contacto</a>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="start">
@@ -31,7 +31,28 @@
 
 <!--This template for mobile view-->
 <ng-template [ngIf]="mobile">
-  <ion-toolbar color="dark">
+
+  <ion-menu contentId="main-content">
+    <ion-content class="ion-padding">
+      <div class="btnWrapper">
+        <ion-button expand="block" color="dark">
+          <a href="#Proyectos">Sobre mi</a>
+        </ion-button>
+      </div>
+      <div class="btnWrapper">
+        <ion-button expand="block" color="dark">
+          <a href="mailto:tonimontalvapastor@icloud.com">Contacto</a>
+        </ion-button>
+      </div>
+      <div class="btnWrapper">
+        <ion-button expand="block" color="dark">
+          <a href="assets/CV_Antonio_MontalvaPa.pdf" target="_blank" download="CV_Antonio_MontalvaPa.pdf">CV</a>
+        </ion-button>
+      </div>
+    </ion-content>
+  </ion-menu>
+
+  <ion-toolbar color="dark" id="main-content">
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>

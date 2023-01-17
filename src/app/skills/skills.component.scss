@@ -21,26 +21,43 @@ h2 {
 }
 
 .angular {
-  width: 80%;
+  width: 100%;
   background-color: #04AA6D;
+  text-align: center;
 }
 
 .ionic {
-  width: 90%;
+  width: 100%;
   background-color: #281ead;
+  text-align: center;
 }
 
 .css {
   width: 90%;
   background-color: #ac5814;
+  text-align: center;
 }
 
 .html {
   width: 90%;
   background-color: #e6d70f;
+  text-align: center;
 }
 
 .dotnet {
   width: 70%;
   background-color: #701ca1;
+  text-align: center;
+}
+
+ion-item {
+  text-align: center;
+}
+ion-item::part(native) {
+  display: flex;
+  flex-direction: column;
+}
+
+.barWrapper {
+  width: 90%;
 }
