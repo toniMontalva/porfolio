@@ -19,14 +19,14 @@ export class SkillsComponent implements OnInit {
       name: 'Angular - TypeScript',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/240px-Angular_full_color_logo.svg.png',
       expertise: '100%',
-      description: 'Creación de componentes, rutas, guards. Inyección de servicios, utilización de rxjs operators, llamadas a API externas. Google Maps, Geolocation con Google API. Autentificación de usuarios con Firebase'
+      description: 'Creación de componentes, servicios, rutas, guards. Inyección de servicios, utilización de rxjs operators, llamadas a API externas. Google Maps, Geolocation con Google API. Autentificación de usuarios con Firebase.'
     },
     {
       id: 1,
       name: 'Ionic',
       logo: 'https://ionicframework.com/img/meta/logo.png',
       expertise: '100%',
-      description: 'Maquetación web y mobile responsive, despliegue de apps en stores.'
+      description: 'Maquetación web y mobile responsive, despliegue de apps en stores. Uso de plugins de Capacitor (Guardado de información / tokens en mememoria interna).'
     },
     {
       id: 2,

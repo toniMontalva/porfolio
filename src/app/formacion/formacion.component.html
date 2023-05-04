@@ -9,8 +9,8 @@
           <h4>Florida Universitaria</h4>
           <h5>CFGS en Desarrollador de Aplicaciones Multiplataforma (DAM)</h5>
           <p>2018-2020</p>
-          <ion-button class="btn" *ngIf="!showFormacionInfo" (click)="this.showFormacionInfo = true">¿Qué he aprendido?</ion-button>
-          <ion-button class="btn" *ngIf="showFormacionInfo" (click)="this.showFormacionInfo = false">Cerrar info</ion-button>
+          <ion-button class="btn" *ngIf="!showFormacionInfo" (click)="this.showFormacionInfo = true;">¿Qué he aprendido?</ion-button>
+          <ion-button class="btn" *ngIf="showFormacionInfo" (click)="this.showFormacionInfo = false;">Cerrar info</ion-button>
           <p *ngIf="showFormacionInfo">En este CFGS he aprendido a desarrollar aplicaciones de escritorio con .NET (C#) / WinForms,
           creación y gestión de APIs con Entity Framework y por otra parte, el desarrollo de APPs móvil
           Híbridas con el framework Ionic y Angular (TypeScript) además de React Native.
@@ -20,8 +20,26 @@
         </div>
       </ion-item>
       <div class="separator ion-text-center">
-        <h3>Formación complementaria</h3>
+        <h3 style="margin: 0; color: white;">Formación complementaria</h3>
       </div>
+
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <ion-img src="https://media.licdn.com/dms/image/C4D0BAQE0iRUqSJueUw/company-logo_100_100/0/1519902704390?e=1691020800&v=beta&t=40ZAf5_K0D4y39BpjTVwpMdfDtWVYjWuwgCrwhzB9X4"></ion-img>
+        </ion-thumbnail>
+        <div class="formacion">
+          <p><b>EF SET English Certificate 66/100 (C1 Advanced)</b></p>
+          <ul>
+            <li>EF Standard English Test (EF SET)</li>
+            <li>Fecha de certificación 31 de enero de 2023.</li>
+          </ul>
+          <ion-button class="certificado" href="https://www.efset.org/cert/thVPCw" target="_blank">
+            <ion-icon name="document-text-outline" slot="start"></ion-icon>
+            <a>Certificado</a>
+          </ion-button>
+        </div>
+      </ion-item>
+
       <ion-item lines="none">
         <ion-thumbnail slot="start">
           <ion-img src="https://pbs.twimg.com/profile_images/1415324297304977411/p9kTpGac_400x400.png"></ion-img>
@@ -32,11 +50,12 @@
             <li>Curso de Udemy (Instructor Maximilian Schwarzmüller)</li>
             <li>Fecha de finalización 26 de junio de 2022.</li>
           </ul>
+          <ion-button class="certificado">
+            <ion-icon name="document-text-outline" slot="start"></ion-icon>
+            <a href="assets/UC-1bbd6405-d902-438d-806b-0e0d742c30bc.pdf" target="_blank" download="UC-1bbd6405-d902-438d-806b-0e0d742c30bc.pdf">Certificado</a>
+          </ion-button>
         </div>
-        <ion-button class="certificado">
-          <ion-icon name="document-text-outline" slot="start"></ion-icon>
-          <a href="assets/UC-1bbd6405-d902-438d-806b-0e0d742c30bc.pdf" target="_blank" download="UC-1bbd6405-d902-438d-806b-0e0d742c30bc.pdf">Certificado</a>
-        </ion-button>
       </ion-item>
+
     </ion-list>
 </div>
