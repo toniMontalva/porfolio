@@ -5,9 +5,14 @@
   position: -webkit-sticky;
   top: 0;
   z-index: 1000;
+  background-color: black;
 }
 
 a {
-  color: white;
   text-decoration: none;
+  color: white;
+
+  ion-img {
+    color: white;
+  }
 }
