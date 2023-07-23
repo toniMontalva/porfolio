@@ -2,16 +2,25 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
 
 .main {
   background-color: black;
   margin-top: 5vh;
   border: 1px black solid;
   border-radius: 5px;
-  font-family: 'Exo', sans-serif;
+  font-family: "Exo", sans-serif;
 }
 
 h2 {
   color: white;
+}
+
+.proyecto {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  // color: white;
 }
