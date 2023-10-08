@@ -5,20 +5,22 @@
   position: -webkit-sticky;
   top: 0;
   z-index: 1000;
-  color: black;
-  background-color: black;
+  --color: white !important;
+  --background: black !important;
 }
 
 .mobile {
-  color: black;
-  background-color: black;
+  --color: white;
+  --background: black;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: white !important;
 
   ion-img {
-    color: white;
+    color: white !important;
   }
 }
+
+
