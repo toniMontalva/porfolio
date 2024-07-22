@@ -1,81 +1,138 @@
 <div class="main">
   <h2 class="ion-text-center">Formación</h2>
-    <ion-list class="list-wrapper" style="border-radius: 0px 20px;">
-      <ion-item lines="none">
-        <ion-thumbnail slot="start">
-          <ion-img src="../../assets/cidead.jpg"></ion-img>
-        </ion-thumbnail>
-        <div class="formacion">
-          <h4>CIDEAD</h4>
-          <h5>Curso de Especialización en Inteligencia Artificial y Big Data</h5>
-          <p>En curso (Noviembre 2023 - 2024)</p>
-          <ul>
-            <li>SpaCy</li>
-            <li>MongoDB</li>
-            <li>Python (Tensorflow, Pandas, Matplotlib, PyTorch)</li>
+  <ion-list class="list-wrapper" style="border-radius: 0px 20px">
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <ion-img src="../../assets/cidead.jpg"></ion-img>
+      </ion-thumbnail>
+      <div class="formacion">
+        <h4>CIDEAD</h4>
+        <h5>Curso de Especialización en Inteligencia Artificial y Big Data</h5>
+        <p>2023-2024</p>
+        <ion-button
+          class="btn"
+          *ngIf="!showCeInfo"
+          (click)="openInfo('ce')"
+          >¿Qué he aprendido?</ion-button
+        >
+        <ion-button
+          class="btn"
+          *ngIf="showCeInfo"
+          (click)="closeInfo('ce')"
+          >Cerrar info</ion-button
+        >
+        <div #ceInfo style="opacity: 0">
+          <ul *ngIf="showCeInfo">
+            <li>Python</li>
+            <li>Databricks</li>
+            <li>
+              BigML: Visualizado de ejecución de algoritmos supervisados y
+              clústering. Análisis de anomalías.
+            </li>
+            <li>Google Colab</li>
+            <li>MongoDB. Consultas</li>
+            <li>
+              Librerías spaCy, Tensorflow (+Keras), Pandas, PyTorch, Numpy,
+              Scikit-learn
+            </li>
+            <li>
+              Hadoop (Hive, Pig). Conceptos finalidad de cada componente de Hadoop.
+            </li>
           </ul>
-
         </div>
-      </ion-item>
-
-      <ion-item lines="none">
-        <ion-thumbnail slot="start">
-          <ion-img src="data:image/png;base64,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"></ion-img>
-        </ion-thumbnail>
-        <div class="formacion">
-          <h4>Florida Universitaria</h4>
-          <h5>CFGS en Desarrollador de Aplicaciones Multiplataforma (DAM)</h5>
-          <p>2018-2020</p>
-          <ion-button class="btn" *ngIf="!showFormacionInfo" (click)="openFormacionInfo()">¿Qué he aprendido?</ion-button>
-          <ion-button class="btn" *ngIf="showFormacionInfo" (click)="closeFormacionInfo()">Cerrar info</ion-button>
-          <div #formacionInfo style="opacity: 0;">
-            <p *ngIf="showFormacionInfo">En este CFGS he aprendido a desarrollar aplicaciones de escritorio con .NET (C#) / WinForms,
-            creación y gestión de APIs con Entity Framework y por otra parte, el desarrollo de APPs móvil
-            Híbridas con el framework Ionic y Angular (TypeScript) además de React Native.
-            Conexión, creación y consultas avanzadas a BBDD relacionales y no relacionales (MySQL y Firebase).</p>
-          </div>
-          <p>Nota media: 8.27</p>
-
-        </div>
-      </ion-item>
-
-      <div class="separator ion-text-center">
-        <h3 style="margin: 0; color: white;">Formación complementaria</h3>
       </div>
+    </ion-item>
 
-      <ion-item lines="none">
-        <ion-thumbnail slot="start">
-          <ion-img src="https://a.storyblok.com/f/71234/103x24/da9ab91cbd/efset-logo_black.svg"></ion-img>
-        </ion-thumbnail>
-        <div class="formacion">
-          <p><b>EF SET English Certificate 66/100 (C1 Advanced)</b></p>
-          <ul>
-            <li>EF Standard English Test (EF SET)</li>
-            <li>Fecha de certificación 31 de enero de 2023.</li>
-          </ul>
-          <ion-button class="certificado" href="https://www.efset.org/cert/thVPCw" target="_blank">
-            <ion-icon name="document-text-outline" slot="start"></ion-icon>
-            <a>Certificado</a>
-          </ion-button>
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <ion-img
+          src="data:image/png;base64,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"
+        ></ion-img>
+      </ion-thumbnail>
+      <div class="formacion">
+        <h4>Florida Universitaria</h4>
+        <h5>CFGS en Desarrollador de Aplicaciones Multiplataforma (DAM)</h5>
+        <p>2018-2020</p>
+        <ion-button
+          class="btn"
+          *ngIf="!showFpInfo"
+          (click)="openInfo('fp')"
+          >¿Qué he aprendido?</ion-button
+        >
+        <ion-button
+          class="btn"
+          *ngIf="showFpInfo"
+          (click)="closeInfo('fp')"
+          >Cerrar info</ion-button
+        >
+        <div #fpInfo style="opacity: 0">
+          <p *ngIf="showFpInfo">
+            En este CFGS he aprendido a desarrollar aplicaciones de escritorio
+            con .NET (C#) / WinForms, creación y gestión de APIs con Entity
+            Framework y por otra parte, el desarrollo de APPs móvil Híbridas con
+            el framework Ionic y Angular (TypeScript) además de React Native.
+            Conexión, creación y consultas avanzadas a BBDD relacionales y no
+            relacionales (MySQL y Firebase).
+          </p>
         </div>
-      </ion-item>
+        <p>Nota media: 8.27</p>
+      </div>
+    </ion-item>
 
-      <ion-item lines="none">
-        <ion-thumbnail slot="start">
-          <ion-img src="https://pbs.twimg.com/profile_images/1415324297304977411/p9kTpGac_400x400.png"></ion-img>
-        </ion-thumbnail>
-        <div class="formacion">
-          <p><b>Ionic – Build iOS, Android & Web Apps with Ionic & Angular (20.5h)</b></p>
-          <ul>
-            <li>Curso de Udemy (Instructor Maximilian Schwarzmüller)</li>
-            <li>Fecha de finalización 26 de junio de 2022.</li>
-          </ul>
-          <ion-button class="certificado">
-            <ion-icon name="document-text-outline" slot="start"></ion-icon>
-            <a href="assets/UC-1bbd6405-d902-438d-806b-0e0d742c30bc.pdf" target="_blank" download="UC-1bbd6405-d902-438d-806b-0e0d742c30bc.pdf">Certificado</a>
-          </ion-button>
-        </div>
-      </ion-item>
+    <div class="separator ion-text-center">
+      <h3 style="margin: 0; color: white">Formación complementaria</h3>
+    </div>
 
-    </ion-list>
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <ion-img
+          src="https://a.storyblok.com/f/71234/103x24/da9ab91cbd/efset-logo_black.svg"
+        ></ion-img>
+      </ion-thumbnail>
+      <div class="formacion">
+        <p><b>EF SET English Certificate 66/100 (C1 Advanced)</b></p>
+        <ul>
+          <li>EF Standard English Test (EF SET)</li>
+          <li>Fecha de certificación 31 de enero de 2023.</li>
+        </ul>
+        <ion-button
+          class="certificado"
+          href="https://www.efset.org/cert/thVPCw"
+          target="_blank"
+        >
+          <ion-icon name="document-text-outline" slot="start"></ion-icon>
+          <a>Certificado</a>
+        </ion-button>
+      </div>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <ion-img
+          src="https://pbs.twimg.com/profile_images/1415324297304977411/p9kTpGac_400x400.png"
+        ></ion-img>
+      </ion-thumbnail>
+      <div class="formacion">
+        <p>
+          <b
+            >Ionic – Build iOS, Android & Web Apps with Ionic & Angular
+            (20.5h)</b
+          >
+        </p>
+        <ul>
+          <li>Curso de Udemy (Instructor Maximilian Schwarzmüller)</li>
+          <li>Fecha de finalización 26 de junio de 2022.</li>
+        </ul>
+        <ion-button class="certificado">
+          <ion-icon name="document-text-outline" slot="start"></ion-icon>
+          <a
+            href="assets/UC-1bbd6405-d902-438d-806b-0e0d742c30bc.pdf"
+            target="_blank"
+            download="UC-1bbd6405-d902-438d-806b-0e0d742c30bc.pdf"
+            >Certificado</a
+          >
+        </ion-button>
+      </div>
+    </ion-item>
+  </ion-list>
 </div>

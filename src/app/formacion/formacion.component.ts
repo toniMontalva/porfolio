@@ -6,26 +6,45 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild, ViewChildren } fro
   styleUrls: ['./formacion.component.scss'],
 })
 export class FormacionComponent implements OnInit {
-  @ViewChild('formacionInfo', { static: false}) pInfo: ElementRef;
-  showFormacionInfo = false;
+  @ViewChild('fpInfo', { static: false}) fpInfo: ElementRef;
+  @ViewChild('ceInfo', { static: false}) ceInfo: ElementRef;
+  showFpInfo = false;
+  showCeInfo = false;
 
   constructor(private renderer2: Renderer2) { }
 
   ngOnInit() {}
 
-  openFormacionInfo() {
-    this.showFormacionInfo = true;
-    this.renderer2.setStyle(this.pInfo.nativeElement, 'opacity', '1');
-    this.renderer2.setStyle(this.pInfo.nativeElement, 'transition', 'opacity 1s');
-
+  openInfo(type: 'fp' | 'ce') {
+    this.setInfo(type, true);
+    if (type === 'fp') {
+      this.renderer2.setStyle(this.fpInfo.nativeElement, 'opacity', '1');
+      this.renderer2.setStyle(this.fpInfo.nativeElement, 'transition', 'opacity 1s ease-out');
+    } else {
+      this.renderer2.setStyle(this.ceInfo.nativeElement, 'opacity', '1');
+      this.renderer2.setStyle(this.ceInfo.nativeElement, 'transition', 'opacity 1s ease-out');
+    }
   }
 
-  closeFormacionInfo() {
+  closeInfo(type: 'fp' | 'ce') {
     setTimeout(() => {
-      this.showFormacionInfo = false;
+      this.setInfo(type, false);
     }, 800);
-    this.renderer2.setStyle(this.pInfo.nativeElement, 'opacity', '0');
-    this.renderer2.setStyle(this.pInfo.nativeElement, 'transition', 'opacity 1s');
+    if (type === 'fp') {
+      this.renderer2.setStyle(this.fpInfo.nativeElement, 'opacity', '0');
+      this.renderer2.setStyle(this.fpInfo.nativeElement, 'transition', 'opacity 1s ease-out');
+    } else {
+      this.renderer2.setStyle(this.ceInfo.nativeElement, 'opacity', '0');
+      this.renderer2.setStyle(this.ceInfo.nativeElement, 'transition', 'opacity 1s ease-out');
+    }
+  }
+
+  setInfo(type: 'fp' | 'ce', value: boolean) {
+    if (type === 'ce') {
+      this.showCeInfo = value;
+    } else {
+      this.showFpInfo = value;
+    }
   }
 
 }
